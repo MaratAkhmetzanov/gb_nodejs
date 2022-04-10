@@ -1,0 +1,28 @@
+{
+  "name": "gb_nodejs",
+  "version": "1.0.0",
+  "description": "nodejs learning",
+  "main": "index.js",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "node": "^16.13.2",
+    "nvm": "0.0.4",
+    "readline-sync": "^1.4.10"
+  },
+  "devDependencies": {
+    "eslint": "^8.13.0"
+  },
+  "scripts": {
+    "start": "node gb_nodejs_lesson_1/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaratAkhmetzanov/gb_nodejs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MaratAkhmetzanov/gb_nodejs/issues"
+  },
+  "homepage": "https://github.com/MaratAkhmetzanov/gb_nodejs#readme"
+}
