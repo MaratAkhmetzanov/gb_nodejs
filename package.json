@@ -3,17 +3,17 @@
   "version": "1.0.0",
   "description": "nodejs learning",
   "main": "index.js",
+  "type": "module",
   "dependencies": {
     "colors": "^1.4.0",
     "node": "^16.13.2",
-    "nvm": "0.0.4",
     "readline-sync": "^1.4.10"
   },
   "devDependencies": {
     "eslint": "^8.13.0"
   },
   "scripts": {
-    "start": "node gb_nodejs_lesson_2/event_loop.js"
+    "start": "node gb_nodejs_lesson_2/index.js"
   },
   "repository": {
     "type": "git",
