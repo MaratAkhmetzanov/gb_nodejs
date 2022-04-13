@@ -54,6 +54,10 @@ emitter.on('timer', (name, timeLeft) => {
 }
 );
 
+//Subscribe to the event 'error'
+emitter.on('error', () => console.log('Error'));
+
+
 //Start all timers in requestTimers array
 requestTimers.forEach(el => {
   runTimer(el.name, getTimerDuration(el.payload));
