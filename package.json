@@ -13,7 +13,8 @@
     "eslint": "^8.13.0"
   },
   "scripts": {
-    "start": "node gb_nodejs_lesson_2/index.js"
+    "start2": "node gb_nodejs_lesson_2/index.js",
+    "start3": "node gb_nodejs_lesson_3/index.js"
   },
   "repository": {
     "type": "git",
