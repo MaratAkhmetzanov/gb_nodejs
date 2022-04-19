@@ -1,8 +1,8 @@
 import fs, { createReadStream, createWriteStream } from 'fs';
 import readLine from 'readline';
 
-const ACESS_LOG = './gb_nodejs_lesson_3/access.log';
-const TEMP_LOG = './gb_nodejs_lesson_3/temp.log';
+const ACESS_LOG = './lesson_3/access.log';
+const TEMP_LOG = './lesson_3/temp.log';
 
 const ipList = [
   '89.123.1.41',
@@ -17,7 +17,7 @@ const readStream = createReadStream(ACESS_LOG, {
 });
 
 ipList.forEach(element => {
-  const wStream = createWriteStream(`./gb_nodejs_lesson_3/${element}_requests.log`, {
+  const wStream = createWriteStream(`./lesson_3/${element}_requests.log`, {
     encoding: 'utf-8',
     flags: 'a'
   });
