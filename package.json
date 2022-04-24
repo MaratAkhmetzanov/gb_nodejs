@@ -6,15 +6,21 @@
   "type": "module",
   "dependencies": {
     "colors": "^1.4.0",
+    "inquirer": "^8.2.2",
     "node": "^16.13.2",
-    "readline-sync": "^1.4.10"
+    "readline-sync": "^1.4.10",
+    "yargs": "^17.4.1"
   },
   "devDependencies": {
     "eslint": "^8.13.0"
   },
   "scripts": {
     "start2": "node lesson_2/index.js",
-    "start3": "node lesson_3/index.js"
+    "start3": "node lesson_3/index.js",
+    "start4": "node lesson_4/cli.js"
+  },
+  "bin": {
+    "reader": "lesson_4/cli.js"
   },
   "repository": {
     "type": "git",

@@ -2,7 +2,6 @@ import fs, { createReadStream, createWriteStream } from 'fs';
 import readLine from 'readline';
 
 const ACESS_LOG = './lesson_3/access.log';
-const TEMP_LOG = './lesson_3/temp.log';
 
 const ipList = [
   '89.123.1.41',
