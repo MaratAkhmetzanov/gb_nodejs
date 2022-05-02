@@ -5,6 +5,8 @@ import fs, { createReadStream } from 'fs';
 
 const __dirname = path.resolve();
 
+const users = [];
+
 const server = http.createServer((request, response) => {
   const indexPath = path.join(__dirname, '/lesson_6/index.html');
 
@@ -31,9 +33,16 @@ const server = http.createServer((request, response) => {
 const socket = new Server(server);
 
 socket.on('connection', (socket) => {
-  console.log('New connection', socket.server.eio.clientsCount);
   socket.emit('SERVER_CONNECTIONS', socket.server.eio.clientsCount);
-  socket.broadcast.emit('SERVER_CONNECTIONS', socket.server.eio.clientsCount);
+  socket.broadcast.emit('SERVER_CONNECTIONS', socket.server.engine.clientsCount);
+
+  socket.on('CLIENT_CONNECT', (data) => {
+    socket.broadcast.emit('SERVER_CONNECT', `${data} connected`);
+  });
+
+  socket.on('disconnect', () => {
+    socket.broadcast.emit('SERVER_DISCONNECT', `${socket.id} disconnected`);
+  });
 
   socket.on('CLIENT_MSG', (data) => {
     socket.emit('SERVER_MSG', { msg: data.msg, name: data.name });
